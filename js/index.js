@@ -167,7 +167,7 @@ donationTab.addEventListener('click', function () {
     );
     document.getElementById('cards-section').classList.remove('hidden');
     document.getElementById('history-section').classList.add('hidden');
-    window.location.reload();
+    // window.location.reload();
 })
 
 
