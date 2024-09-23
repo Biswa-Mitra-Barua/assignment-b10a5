@@ -35,6 +35,16 @@ donateNoakhaliBtn.addEventListener('click', function () {
 
             const finalMyAmount = newMyAmount - amountDonationNoakhali;
             myAmount.innerText = finalMyAmount;
+
+            // history output
+            const historyItem = document.createElement('div');
+            historyItem.className = 'bg-white px-6 py-10 space-y-4 mt-6 mb-6 text-xl font-semibold border rounded-lg border-blue-200 shadow-md';
+            historyItem.innerHTML = `
+                <p>${amountDonationNoakhali.toFixed(2)} Taka is Donated for Flood at Noakhali, Bangladesh</p>
+                <p class="text-lg text-gray-500">Date: ${new Date().toString()}</p>
+                `;
+            const historyContainer = document.getElementById('history-list');
+            historyContainer.insertBefore(historyItem, historyContainer.firstChild);
         }
     }
 
@@ -70,6 +80,16 @@ donateFeniBtn.addEventListener('click', function () {
 
             const finalMyAmount = newMyAmount - amountDonationFeni;
             myAmount.innerText = finalMyAmount;
+
+            // history output
+            const historyItem = document.createElement('div');
+            historyItem.className = 'bg-white px-6 py-10 space-y-4 mt-6 mb-6 text-xl font-semibold border rounded-lg border-blue-200 shadow-md';
+            historyItem.innerHTML = `
+                <p>${amountDonationFeni.toFixed(2)} Taka is Donated for Flood Relief in Feni, Bangladesh</p>
+                <p class="text-lg text-gray-500">Date: ${new Date().toString()}</p>
+                `;
+            const historyContainer = document.getElementById('history-list');
+            historyContainer.insertBefore(historyItem, historyContainer.firstChild);
         }
     }
 
@@ -107,9 +127,48 @@ donateQuotaBtn.addEventListener('click', function () {
             const finalMyAmount = newMyAmount - amountDonationQuota;
             myAmount.innerText = finalMyAmount;
 
+            // history output
+            const historyItem = document.createElement('div');
+            historyItem.className = 'bg-white px-6 py-10 space-y-4 mt-6 mb-6 text-xl font-semibold border rounded-lg border-blue-200 shadow-md';
+            historyItem.innerHTML = `
+                <p>${amountDonationQuota.toFixed(2)} Taka is Donated for Aid for Injured in the Quota Movement</p>
+                <p class="text-lg text-gray-500">Date: ${new Date().toString()}</p>
+                `;
+            const historyContainer = document.getElementById('history-list');
+            historyContainer.insertBefore(historyItem, historyContainer.firstChild);
         }
     }
 
 })
+
+// donation & history tab functionality
+const historyTab = document.getElementById('history-tab');
+const donationTab = document.getElementById('donation-tab');
+
+historyTab.addEventListener('click', function () {
+    historyTab.classList.add(
+        'bg-lime-300'
+    );
+    historyTab.classList.remove('text-gray-600');
+    donationTab.classList.remove(
+        'bg-lime-300'
+    );
+    donationTab.classList.add('text-gray-600');
+    document.getElementById('cards-section').classList.add('hidden');
+    document.getElementById('history-section').classList.remove('hidden');
+})
+
+donationTab.addEventListener('click', function () {
+    donationTab.classList.add(
+        'bg-lime-300'
+    );
+    historyTab.classList.remove(
+        'bg-lime-300'
+    );
+    document.getElementById('cards-section').classList.remove('hidden');
+    document.getElementById('history-section').classList.add('hidden');
+    window.location.reload();
+})
+
 
 
