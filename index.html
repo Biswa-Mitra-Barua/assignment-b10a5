@@ -60,9 +60,9 @@
                         contribution, big or small, makes difference. Please join us in supporting the relief efforts
                         and making a positive impact on the lives of those in need.</p>
                     <input id="input-noakhali" type="number" placeholder="Write Amount Here"
-                        class="input input-bordered w-full max-w-full" />
+                        class="input input-bordered w-11/12" />
                     <br>
-                    <button id="donate-noakhali-btn" onclick="my_modal_1.showModal()" class="bg-lime-400 px-60 font-bold py-3 rounded-lg">Donate
+                    <button id="donate-noakhali-btn" onclick="my_modal_1.showModal()" class="bg-lime-400 px-64 font-bold py-3 rounded-lg">Donate
                         Now</button>
 
                     <!-- Open the modal using ID.showModal() method -->
@@ -104,9 +104,26 @@
                         help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a
                         real difference. Please consider donating today to assist those in urgent need.</p>
                     <input id="input-feni" type="number" placeholder="Write Amount Here"
-                        class="input input-bordered w-full max-w-full" />
+                        class="input input-bordered w-11/12" />
                     <br>
-                    <button id="donate-feni-btn" class="bg-lime-400 px-60 font-bold py-3 rounded-lg">Donate Now</button>
+                    <button id="donate-feni-btn" onclick="my_modal_2.showModal()" class="bg-lime-400 px-64 font-bold py-3 rounded-lg">Donate Now</button>
+                    <!-- Open the modal using ID.showModal() method -->
+                    <dialog id="my_modal_2" class="modal">
+                        <div class="modal-box text-center">
+                            <h3 class="text-3xl text-primary font-bold mb-5">Congrats!</h3>
+                            <div class="flex items-center justify-center">
+                                <img src="assets/coin.png" alt="">
+                            </div>
+                            <p class="py-4">You Have Donated for Humankind.</p>
+                            <p class="font-bold text-xl">Succesfully</p>
+                            <div class="modal-action flex justify-center items-center">
+                                <form method="dialog">
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    <button id="continue-btn" class="btn bg-primary text-white px-8">Close Confirmation</button>
+                                </form>
+                            </div>
+                        </div>
+                    </dialog>
                 </div>
             </div>
 
@@ -130,10 +147,26 @@
                         vital role in alleviating their suffering and aiding in their recovery. Please consider making a
                         donation to support these brave individuals in their time of need.</p>
                     <input id="input-quota" type="number" placeholder="Write Amount Here"
-                        class="input input-bordered w-full max-w-full" />
+                        class="input input-bordered w-11/12" />
                     <br>
-                    <button id="donate-quota-btn" class="bg-lime-400 px-60 font-bold py-3 rounded-lg">Donate
+                    <button id="donate-quota-btn" onclick="my_modal_3.showModal()" class="bg-lime-400 px-64 font-bold py-3 rounded-lg">Donate
                         Now</button>
+                    <dialog id="my_modal_3" class="modal">
+                        <div class="modal-box text-center">
+                            <h3 class="text-3xl text-primary font-bold mb-5">Congrats!</h3>
+                            <div class="flex items-center justify-center">
+                                <img src="assets/coin.png" alt="">
+                            </div>
+                            <p class="py-4">You Have Donated for Humankind.</p>
+                            <p class="font-bold text-xl">Succesfully</p>
+                            <div class="modal-action flex justify-center items-center">
+                                <form method="dialog">
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    <button id="continue-btn" class="btn bg-primary text-white px-8">Close Confirmation</button>
+                                </form>
+                            </div>
+                        </div>
+                    </dialog>
                 </div>
             </div>
         </section>
