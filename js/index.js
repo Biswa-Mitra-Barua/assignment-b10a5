@@ -1,16 +1,17 @@
 function getInputValueById(id) {
     return parseFloat(document.getElementById(id).value);
 }
-// function getInnerTextById (id){
-//     return parseFloat(document.getElementById(id).innerText);
-// }
+function getInnerItemById (id){
+    return document.getElementById(id);
+}
+
 
 // ----Noakhali card---
-const donateNoakhaliBtn = document.getElementById('donate-noakhali-btn');
+const donateNoakhaliBtn = getInnerItemById('donate-noakhali-btn');
 donateNoakhaliBtn.addEventListener('click', function () {
 
     const amountDonationNoakhali = getInputValueById('input-noakhali');
-    const myAmount = document.getElementById('my-amount');
+    const myAmount = getInnerItemById('my-amount');
     const newMyAmount = myAmount.innerText;
 
     if (newMyAmount <= 0 || amountDonationNoakhali > newMyAmount) {
@@ -21,13 +22,13 @@ donateNoakhaliBtn.addEventListener('click', function () {
     }
     else {
         if (amountDonationNoakhali <= 0 || isNaN(amountDonationNoakhali)) {
-            alert('Please provide the positive amount');
+            alert('Please provide a valid amount');
             const myModal = document.getElementById('my_modal_1').classList.add('hidden');
             window.location.reload();
             return;
         }
         else {
-            const amountNoakhali = document.getElementById('amount-noakhali');
+            const amountNoakhali = getInnerItemById('amount-noakhali');
             const newAmountNoakhali = Number((amountNoakhali).innerText);
 
             const totalAmountNoakhali = newAmountNoakhali + amountDonationNoakhali;
@@ -43,19 +44,20 @@ donateNoakhaliBtn.addEventListener('click', function () {
                 <p>${amountDonationNoakhali.toFixed(2)} Taka is Donated for Flood at Noakhali, Bangladesh</p>
                 <p class="text-lg text-gray-500">Date: ${new Date().toString()}</p>
                 `;
-            const historyContainer = document.getElementById('history-list');
+            const historyContainer = getInnerItemById('history-list');
             historyContainer.insertBefore(historyItem, historyContainer.firstChild);
         }
+        
     }
 
 })
 
 // ----Feni card---
-const donateFeniBtn = document.getElementById('donate-feni-btn');
+const donateFeniBtn = getInnerItemById('donate-feni-btn');
 donateFeniBtn.addEventListener('click', function () {
 
     const amountDonationFeni = getInputValueById('input-feni');
-    const myAmount = document.getElementById('my-amount');
+    const myAmount = getInnerItemById('my-amount');
     const newMyAmount = myAmount.innerText;
 
     if (newMyAmount <= 0 || amountDonationFeni > newMyAmount) {
@@ -66,13 +68,13 @@ donateFeniBtn.addEventListener('click', function () {
     }
     else {
         if (amountDonationFeni <= 0 || isNaN(amountDonationFeni)) {
-            alert('Please provide the positive amount');
+            alert('Please provide a valid amount');
             const myModal = document.getElementById('my_modal_2').classList.add('hidden');
             window.location.reload();
             return;
         }
         else {
-            const amountFeni = document.getElementById('amount-feni');
+            const amountFeni = getInnerItemById('amount-feni');
             const newAmountFeni = Number((amountFeni).innerText);
 
             const totalAmountFeni = newAmountFeni + amountDonationFeni;
@@ -88,7 +90,7 @@ donateFeniBtn.addEventListener('click', function () {
                 <p>${amountDonationFeni.toFixed(2)} Taka is Donated for Flood Relief in Feni, Bangladesh</p>
                 <p class="text-lg text-gray-500">Date: ${new Date().toString()}</p>
                 `;
-            const historyContainer = document.getElementById('history-list');
+            const historyContainer = getInnerItemById('history-list');
             historyContainer.insertBefore(historyItem, historyContainer.firstChild);
         }
     }
@@ -97,11 +99,11 @@ donateFeniBtn.addEventListener('click', function () {
 
 
 // ----Quota card---
-const donateQuotaBtn = document.getElementById('donate-quota-btn');
+const donateQuotaBtn = getInnerItemById('donate-quota-btn');
 donateQuotaBtn.addEventListener('click', function () {
 
     const amountDonationQuota = getInputValueById('input-quota');
-    const myAmount = document.getElementById('my-amount');
+    const myAmount = getInnerItemById('my-amount');
     const newMyAmount = myAmount.innerText;
 
     if (newMyAmount <= 0 || amountDonationQuota > newMyAmount) {
@@ -112,13 +114,13 @@ donateQuotaBtn.addEventListener('click', function () {
     }
     else {
         if (amountDonationQuota <= 0 || isNaN(amountDonationQuota)) {
-            alert('Please provide the positive amount');
+            alert('Please provide a valid amount');
             const myModal = document.getElementById('my_modal_3').classList.add('hidden');
             window.location.reload();
             return;
         }
         else {
-            const amountQuota = document.getElementById('amount-quota');
+            const amountQuota = getInnerItemById('amount-quota');
             const newAmountQuota = Number((amountQuota).innerText);
 
             const totalAmountQuota = newAmountQuota + amountDonationQuota;
@@ -134,7 +136,7 @@ donateQuotaBtn.addEventListener('click', function () {
                 <p>${amountDonationQuota.toFixed(2)} Taka is Donated for Aid for Injured in the Quota Movement</p>
                 <p class="text-lg text-gray-500">Date: ${new Date().toString()}</p>
                 `;
-            const historyContainer = document.getElementById('history-list');
+            const historyContainer = getInnerItemById('history-list');
             historyContainer.insertBefore(historyItem, historyContainer.firstChild);
         }
     }
@@ -142,8 +144,8 @@ donateQuotaBtn.addEventListener('click', function () {
 })
 
 // donation & history tab functionality
-const historyTab = document.getElementById('history-tab');
-const donationTab = document.getElementById('donation-tab');
+const historyTab = getInnerItemById('history-tab');
+const donationTab = getInnerItemById('donation-tab');
 
 historyTab.addEventListener('click', function () {
     historyTab.classList.add(
