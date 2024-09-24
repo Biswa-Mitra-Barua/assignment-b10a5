@@ -32,11 +32,11 @@
             class="bg-slate-100/60 flex justify-center items-center gap-5 lg:gap-10 py-8 shadow-md sticky top-24 backdrop-filter backdrop-blur-lg z-9">
             <div>
                 <button id="donation-tab"
-                    class="btn btn-normal lg:btn-lg bg-lime-300 font-bold focus:outline-none transition-colors duration-200">Donation</button>
+                    class="btn btn-normal lg:btn-lg bg-lime-300 hover:bg-lime-300 font-bold focus:outline-none transition-colors duration-200">Donation</button>
             </div>
             <div>
                 <button id="history-tab"
-                    class="btn brn-normal lg:btn-lg px-8 font-bold focus:outline-none transition-colors duration-200">History</button>
+                    class="btn brn-normal lg:btn-lg px-6 lg:px-8 font-bold focus:outline-none hover:bg-lime-300 transition-colors duration-200">History</button>
             </div>
         </section>
 
@@ -44,7 +44,7 @@
         <section id="cards-section" class="w-11/12 mx-auto">
             <!-- 1st card: Noakhali -->
             <div
-                class="grid grid-cols-1 lg:grid-cols-2 justify-between items-center p-5 rounded-xl gap-6 mt-10 mb-10 border-2 border-gray-200">
+                class="grid grid-cols-1 lg:grid-cols-2 justify-between items-center p-5 rounded-xl gap-6 mt-10 mb-10 border-2 border-gray-200 shadow-lg">
                 <div>
                     <img src="assets/noakhali.png" alt="">
                 </div>
@@ -60,7 +60,7 @@
                         contribution, big or small, makes difference. Please join us in supporting the relief efforts
                         and making a positive impact on the lives of those in need.</p>
                     <input id="input-noakhali" type="number" placeholder="Write Amount Here"
-                        class="input input-bordered w-11/12" />
+                        class="input input-bordered w-11/12"/>
                     <br>
                     <button id="donate-noakhali-btn" onclick="my_modal_1.showModal()" class="bg-lime-400 px-28 lg:px-64 font-bold py-3 rounded-lg">Donate
                         Now</button>
@@ -86,7 +86,7 @@
 
             <!-- 2nd card: Feni -->
             <div
-                class="grid grid-cols-1 lg:grid-cols-2 justify-between items-center p-5 rounded-xl gap-8 mt-10 mb-10 border-2 border-gray-200">
+                class="grid grid-cols-1 lg:grid-cols-2 justify-between items-center p-5 rounded-xl gap-8 mt-10 mb-10 border-2 border-gray-200 shadow-lg">
                 <div>
                     <img src="assets/feni.png" alt="">
                 </div>
@@ -127,7 +127,7 @@
 
             <!-- 3rd card: Quota -->
             <div
-                class="grid grid-cols-1 lg:grid-cols-2 justify-between items-center p-5 rounded-xl gap-8 mt-10 mb-10 border-2 border-gray-200">
+                class="grid grid-cols-1 lg:grid-cols-2 justify-between items-center p-5 rounded-xl gap-8 mt-10 mb-10 border-2 border-gray-200 shadow-lg">
                 <div>
                     <img src="assets/quota-protest.png">
                 </div>
@@ -177,5 +177,6 @@
     </main>
     <script src="js/index.js"></script>
 </body>
+<footer class="bg-pink-50 h-20 lg:h-32 mt-24 lg:mt-40"></footer>
 
 </html>
